@@ -24,6 +24,12 @@
 - Components with [shadcn/ui](https://ui.shadcn.com/)
   - Environment variables automatically assigned to Vercel project
 
+## Setup
+
+Somehow the keys were already magically added to vercel, not sure if that will work as intended once we do the second project...
+Add keys to .env.local
+Add project id to package.json for type generation
+
 ## Clone and run locally (not necessary if deployed to Vercel)
 
 1. You'll first need a Supabase project which can be made [via the Supabase dashboard](https://database.new)
