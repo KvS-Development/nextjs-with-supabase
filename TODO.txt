@@ -1,0 +1,9 @@
+Hide supabase browserClient and serverClient, only expose auth parts, to prevent tempting to use it, since we'll be using the repository pattern instead.
+Create example repository for user profile (seems like it should be generic enough that you pretty much always want that anyway)
+Add sentry
+Add logtail
+Add /api/log endpoint for browser side logging, and even then, only upon request by user to provide support.
+Add Jest
+Add Cypress
+Add Chromatic
+Strip away resources that aren't relevant, so we have the cleanest template we can think of.
