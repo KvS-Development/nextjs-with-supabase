@@ -1,4 +1,3 @@
-Create example repository for user profile (seems like it should be generic enough that you pretty much always want that anyway)
 Add sentry
 Add logtail
 Add /api/log endpoint for browser side logging, and even then, only upon request by user to provide support.
