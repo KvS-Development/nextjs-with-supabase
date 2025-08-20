@@ -1,4 +1,4 @@
-import { createClient } from '@supabase/supabase-js'
+import type { SupabaseClient } from '@supabase/supabase-js'
 
 // Base interfaces
 interface DatabaseStorable {
@@ -22,7 +22,7 @@ abstract class BaseClass<TData extends DatabaseStorable> {
 // Repository for regular documents (multiple per user)
 class Repository<TClass extends BaseClass<TData>, TData extends DatabaseStorable> {
   constructor(
-    private supabase: ReturnType<typeof createClient>,
+    private supabase: SupabaseClient<any, any>,
     private typeName: string,
     private classConstructor: new (data: TData) => TClass,
     private currentVersion: number
@@ -159,7 +159,7 @@ class Repository<TClass extends BaseClass<TData>, TData extends DatabaseStorable
 // Singleton repository (one per user)
 class SingletonRepository<TClass extends BaseClass<TData>, TData extends DatabaseStorable> {
   constructor(
-    private supabase: ReturnType<typeof createClient>,
+    private supabase: SupabaseClient<any, any>,
     private typeName: string,
     private classConstructor: new (data: TData) => TClass,
     private currentVersion: number,
