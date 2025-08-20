@@ -253,9 +253,12 @@ class SingletonRepository<TClass extends BaseClass<TData>, TData extends Databas
   }
 }
 
-export { 
-  Repository, 
-  SingletonRepository, 
-  BaseClass, 
+export {
+  Repository,
+  SingletonRepository,
+  BaseClass
+}
+
+export type {
   DatabaseStorable
 }
