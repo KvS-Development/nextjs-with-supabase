@@ -22,6 +22,15 @@ Add project id to package.json for type generation if desired, but with the repo
 
 This template comes with the default shadcn/ui style initialized. If you instead want other ui.shadcn styles, delete `components.json` and [re-install shadcn/ui](https://ui.shadcn.com/docs/installation/next)
 
+### Environment variables
+
+| Variable | Functionality |
+| --- | --- |
+| `SENTRY_DSN` | Enable Sentry error monitoring |
+| `LOGTAIL_SOURCE_TOKEN` | Configure Logtail logging |
+| `CYPRESS_RECORD_KEY` | Record Cypress tests to Cypress Cloud |
+| `CHROMATIC_PROJECT_TOKEN` | Publish Storybook builds to Chromatic |
+
 ## More Supabase examples
 
 - [Next.js Subscription Payments Starter](https://github.com/vercel/nextjs-subscription-payments)
