@@ -1,5 +1,5 @@
 import { createClient } from '@supabase/supabase-js'
-import { Repository, SingletonRepository, BaseClass, DatabaseStorable } from './repositories'
+import { Repository, SingletonRepository, BaseClass, DatabaseStorable } from './repository'
 
 // Initialize Supabase client
 const supabase = createClient('your-supabase-url', 'your-anon-key')
