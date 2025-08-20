@@ -1,4 +1,3 @@
-Hide supabase browserClient and serverClient, only expose auth parts, to prevent tempting to use it, since we'll be using the repository pattern instead.
 Create example repository for user profile (seems like it should be generic enough that you pretty much always want that anyway)
 Add sentry
 Add logtail
