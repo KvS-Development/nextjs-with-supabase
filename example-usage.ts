@@ -237,7 +237,7 @@ const settingsRepo = new SingletonRepository(
   'user_settings',
   UserSettings,
   SETTINGS_VERSION,
-  () => ({
+  (): UserSettingsData => ({
     version: SETTINGS_VERSION,
     typeName: 'user_settings',
     theme: 'auto',
