@@ -14,5 +14,5 @@ test('get started link', async ({ page }) => {
   await page.getByRole('link', { name: 'Sign in' }).click();
 
   // Expects page to have a heading with the name of Installation.
-  await expect(page.getByRole('button', { name: 'Login' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Loginn' })).toBeVisible();
 });
