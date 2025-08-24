@@ -8,8 +8,22 @@ test('has title', async ({ page }) => {
 });
 
 test('sign in link', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
-
+  await page.goto('http://localhost:3000/', { waitUntil: 'domcontentloaded' });
+  
+  // Wait for Next.js to be ready
+  await page.waitForSelector('#__next', { state: 'visible' });
+  
+  // Extra wait for CI environment
+  if (process.env.CI) {
+    await page.waitForTimeout(2000); // Give Next.js time to hydrate
+  }
+  
+  // More specific wait
+  await page.waitForSelector('text="Sign in"', { 
+    state: 'visible',
+    timeout: 5000 
+  });
+  
   // Click the sign in button
   await page.click('text=/sign in/i');
 
