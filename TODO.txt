@@ -1,7 +1,4 @@
-Add sentry
-Add logtail
 Add Jest
 Add Cypress
 Add Chromatic
-Add /api/log endpoint for browser side logging, and even then, only upon request by user to provide support (flag should be stored in user settings, off by default and checked before actually logging.
 Strip away resources that aren't relevant, so we have the cleanest template we can think of.
