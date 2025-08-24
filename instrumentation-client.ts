@@ -10,9 +10,12 @@ Sentry.init({
   // Add optional integrations for additional features
   integrations: [
     Sentry.replayIntegration(),
+    Sentry.consoleLoggingIntegration({ levels: ["log", "warn", "error"] }),
   ],
   // Enable logs to be sent to Sentry
   enableLogs: true,
+  // 5% trace change
+  tracesSampleRate: 0.05,
 
   // Define how likely Replay events are sampled.
   // This sets the sample rate to be 10%. You may want this to be 100% while
