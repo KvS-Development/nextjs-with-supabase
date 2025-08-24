@@ -1,2 +1,3 @@
-Add Jest
+Move config files from root to config folder, for files that don't need to be in root. Sort them further if it makes sense: i.e. sentry has multiple config files, so put under config\sentry\
 Strip away resources that aren't relevant, so we have the cleanest template we can think of.
+Add agents.md file to guid agents: Say how to use Sentry for logging and exceptions, say supabase shouldn't be called except through the repository pattern. Explain that typescript classes should get repositories if they are stored. Each repository should get it's own file.
