@@ -10,9 +10,6 @@ test('has title', async ({ page }) => {
 test('sign in link', async ({ page }) => {
   await page.goto('http://localhost:3000/', { waitUntil: 'domcontentloaded' });
   
-  // Wait for Next.js to be ready
-  await page.waitForSelector('#__next', { state: 'visible' });
-  
   // Extra wait for CI environment
   if (process.env.CI) {
     await page.waitForTimeout(2000); // Give Next.js time to hydrate
