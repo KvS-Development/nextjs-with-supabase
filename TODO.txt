@@ -1,4 +1,2 @@
 Add Jest
-Add Cypress
-Add Chromatic
 Strip away resources that aren't relevant, so we have the cleanest template we can think of.
