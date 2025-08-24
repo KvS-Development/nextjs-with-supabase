@@ -7,7 +7,7 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle(/Supabase/);
 });
 
-test('get started link', async ({ page }) => {
+test('sign in link', async ({ page }) => {
   await page.goto('http://localhost:3000/');
 
   // Click the sign in button
