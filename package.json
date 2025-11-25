@@ -5,6 +5,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "test:e2e": "playwright test --config=config/testing/playwright.config.ts",
     "update-types": "supabase gen types typescript --project-id cvgiqfbpsrsukgrqzfuo --schema public > supabase/database.types.ts"
   },
   "dependencies": {
