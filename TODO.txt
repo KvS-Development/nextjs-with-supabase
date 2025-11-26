@@ -1,3 +1,4 @@
 Move config files from root to config folder, for files that don't need to be in root. Sort them further if it makes sense: i.e. sentry has multiple config files, so put under config\sentry\
 Strip away resources that aren't relevant, so we have the cleanest template we can think of.
 Add agents.md file to guide agents: Say how to use Sentry for logging and exceptions, say supabase shouldn't be called except through the repository pattern. Explain that typescript classes should get repositories if they are stored. Each repository should get its own file.
+Actually, each class should have the repository as a private static, and just expose the list, get update and delete methods. might be able to put all supabase references in Repository class and singleton repository class. that way the rest of the code only sees the classes and doesn't have to care about the concerns of how they stored. 
