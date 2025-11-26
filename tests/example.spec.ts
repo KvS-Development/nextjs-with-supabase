@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 test('has title', async ({ page }) => {
-  await page.goto('http://localhost:3000/');
+  await page.goto('/');
 
   // Expect a title "to contain" a substring.
   await expect(page).toHaveTitle(/Supabase/);
@@ -9,7 +9,7 @@ test('has title', async ({ page }) => {
 
 /* This keeps timing out in Github actions, can't figure out why
 test('sign in link', async ({ page }) => {
-  await page.goto('http://localhost:3000/', { waitUntil: 'domcontentloaded' });
+  await page.goto('/', { waitUntil: 'domcontentloaded' });
   
   // Extra wait for CI environment
   if (process.env.CI) {
