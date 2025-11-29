@@ -7,6 +7,12 @@ test('has title', async ({ page }) => {
   await expect(page).toHaveTitle(/Supabase/);
 });
 
+test('See if merging incoming tests will run those tests', async ({ page }) => {
+  await page.goto('/');
+
+  // Expect a title "to contain" a substring.
+  await expect(page).toHaveTitle(/Supabase/);
+});
 
 test('sign in link', async ({ page }) => {
   await page.goto('/', { waitUntil: 'domcontentloaded' });
