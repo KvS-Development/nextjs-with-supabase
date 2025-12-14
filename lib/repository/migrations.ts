@@ -1,4 +1,4 @@
-import { BaseClass, DatabaseStorable } from './repository'
+import { BaseClass, DatabaseStorable } from './index'
 
 // ============================================
 // Approach 1: Strongly Typed Migration Chain
